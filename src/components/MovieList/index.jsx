@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { getListFilm } from "../../api";
-
+import { ROUTER_PATH } from "@/router/PATH/";
 import style from "./style.module.scss";
-import { Link } from "react-router-dom";
 
 export const MovieList = () => {
   const [listFilm, setListFilm] = useState("");
@@ -24,7 +24,10 @@ export const MovieList = () => {
       <ul className={style.movieList}>
         {listFilm?.docs?.map((item) => (
           <li key={item.id}>
-            <Link className={style.itemLink} to={item.id}>
+            <Link
+              className={style.itemLink}
+              to={ROUTER_PATH.MOVIE + `/${item.id}`}
+            >
               <img
                 className={style.poster}
                 src={item?.poster.url}

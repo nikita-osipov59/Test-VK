@@ -1,0 +1,11 @@
+@import "@/styles/variables.modules";
+
+.video {
+  height: 700px;
+  width: 100%;
+}
+
+.title {
+  margin: 25px 0px;
+  font-size: $fontSize-medium;
+}

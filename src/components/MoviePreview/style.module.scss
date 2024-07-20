@@ -10,6 +10,9 @@
   gap: 15px;
   position: relative;
   padding-top: 50px;
+  button {
+    width: fit-content;
+  }
   .logo {
     max-width: 570px;
     max-height: 190px;
@@ -47,7 +50,6 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    width: fit-content;
     transition: 0.3s;
     &:hover {
       transform: scale(110%);

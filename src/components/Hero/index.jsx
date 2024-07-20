@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getRandomFilm } from "../../api";
 import { Play } from "@/components/ui/icons/Play";
+import { ROUTER_PATH } from "@/router/PATH/";
 
 import style from "./style.module.scss";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const [randomFilm, setRandomFilm] = useState("");
@@ -14,7 +16,7 @@ export const Hero = () => {
   };
 
   useEffect(() => {
-    getRandom();
+    // getRandom();
   }, []);
 
   return (
@@ -50,9 +52,12 @@ export const Hero = () => {
           src={randomFilm ? randomFilm?.poster.url : "Загрузка.."}
           alt={randomFilm?.name}
         />
-        <button className={style.button}>
+        <Link
+          className={style.button}
+          to={ROUTER_PATH.MOVIE + `/${randomFilm.id}`}
+        >
           Смотреть <Play />
-        </button>
+        </Link>
       </div>
     </>
   );

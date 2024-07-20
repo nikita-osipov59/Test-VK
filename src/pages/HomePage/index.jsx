@@ -1,9 +1,9 @@
 import React from "react";
 import { Header } from "@/components/ui/Header";
-import { Container } from "@/components/Container";
+import { Container } from "@/components/ui/Container";
 import { Hero } from "@/components/Hero";
 import { MovieList } from "@/components/MovieList";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/ui/Footer";
 
 const HomePage = () => {
   return (
