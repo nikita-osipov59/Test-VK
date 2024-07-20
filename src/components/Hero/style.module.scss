@@ -5,6 +5,8 @@
   flex-direction: column;
   margin-top: 50px;
   width: fit-content;
+  // justify-content: center;
+  height: 90vh;
   gap: 15px;
   position: relative;
   padding-top: 50px;
@@ -37,6 +39,7 @@
     z-index: -1;
     top: 0px;
     right: -10%;
+    border-radius: 20px;
   }
   .button {
     padding: 10px 15px;

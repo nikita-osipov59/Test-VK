@@ -2,6 +2,8 @@ import React from "react";
 import { Header } from "@/components/ui/Header";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
+import { MovieList } from "@/components/MovieList";
+import { Footer } from "@/components/Footer";
 
 const HomePage = () => {
   return (
@@ -9,6 +11,8 @@ const HomePage = () => {
       <Container>
         <Header />
         <Hero />
+        <MovieList />
+        <Footer />
       </Container>
     </>
   );
