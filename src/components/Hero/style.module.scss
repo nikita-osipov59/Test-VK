@@ -1,0 +1,55 @@
+@import "@/styles/variables.modules";
+
+.filmBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: fit-content;
+  gap: 15px;
+  position: relative;
+  padding-top: 50px;
+  button {
+    width: fit-content;
+  }
+  .logo {
+    max-width: 570px;
+    max-height: 190px;
+  }
+  .content {
+    display: flex;
+    gap: 10px;
+    color: $color-secondary;
+    .genreList {
+      display: flex;
+      li + li {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .description {
+    width: 50%;
+  }
+  .bgFilm {
+    position: absolute;
+    max-height: 85vh;
+    max-width: 100vw;
+    z-index: -1;
+    top: 0px;
+    right: -10%;
+  }
+  .button {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #f50 69.93%, #d6bb00);
+    color: $color-main;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+}

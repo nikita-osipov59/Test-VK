@@ -1,0 +1,11 @@
+@import "@/styles/variables.modules";
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+.logo {
+  color: $color-main;
+}
