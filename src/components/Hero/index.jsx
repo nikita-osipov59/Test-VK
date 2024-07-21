@@ -32,7 +32,10 @@ export const Hero = () => {
         <h1>{randomFilm ? randomFilm?.name : "Загрузка.."}</h1>
         {randomFilm ? (
           <div className={style.content}>
-            <span>{randomFilm?.rating.imdb}⭐</span>
+            <span>
+              <img className={style.imdb} src="/imdb.png" alt="imdb" />
+              {randomFilm?.rating.imdb}⭐
+            </span>
             <p>{randomFilm ? randomFilm?.year : "Загрузка.."}</p>
             <ul className={style.genreList}>
               {randomFilm?.genres.map((genre, index) => {

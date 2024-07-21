@@ -7,6 +7,7 @@ import style from "./style.module.scss";
 export const MoviePreview = ({ data }) => {
   return (
     <>
+      {/* {TODO: сделать переисползуемым компонент} */}
       <div className={style.filmBox}>
         <h2>
           {data ? (
@@ -18,7 +19,10 @@ export const MoviePreview = ({ data }) => {
         <h1>{data ? data?.name : "Загрузка.."}</h1>
         {data ? (
           <div className={style.content}>
-            <span>{data?.rating.imdb}⭐</span>
+            <span>
+              <img className={style.imdb} src="/imdb.png" alt="imdb" />
+              {data?.rating.imdb}⭐
+            </span>
             <p>{data ? data?.year : "Загрузка.."}</p>
             <ul className={style.genreList}>
               {data?.genres.map((genre, index) => {

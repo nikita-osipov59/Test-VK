@@ -3,7 +3,7 @@ import axios from "axios";
 export const getRandomFilm = async () => {
   const response = await axios
     .get(
-      "https://api.kinopoisk.dev/v1.4/movie/random?notNullFields=name&notNullFields=description&notNullFields=rating.imdb&notNullFields=logo.url&notNullFields=poster.url&notNullFields=ageRating&notNullFields=year",
+      "https://api.kinopoisk.dev/v1.4/movie/random?notNullFields=videos.trailers.url&notNullFields=name&notNullFields=description&notNullFields=rating.imdb&notNullFields=logo.url&notNullFields=poster.url&notNullFields=ageRating&notNullFields=year",
       {
         headers: {
           accept: "application/json",

@@ -6,7 +6,7 @@
   margin-top: 50px;
   width: fit-content;
   // justify-content: center;
-  height: 90vh;
+  height: 900px;
   gap: 15px;
   position: relative;
   padding-top: 50px;
@@ -18,6 +18,11 @@
     display: flex;
     gap: 10px;
     color: $color-secondary;
+    align-items: center;
+    .imdb {
+      height: 25px;
+      margin-right: 10px;
+    }
     .genreList {
       display: flex;
       li + li {
@@ -31,8 +36,7 @@
   }
   .bgFilm {
     position: absolute;
-    max-height: 85vh;
-    max-width: 100vw;
+    height: 700px;
     z-index: -1;
     top: 0px;
     right: -10%;

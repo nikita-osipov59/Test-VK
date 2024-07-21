@@ -1,0 +1,26 @@
+@import "@/styles/variables.modules";
+
+.title {
+  margin: 25px 0px;
+  font-size: 24px;
+}
+.castList {
+  display: flex;
+  gap: 15px;
+  overflow: auto;
+  padding: 0px 0px 15px 0px;
+  .castItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .photo {
+    height: 200px;
+    min-width: 130px;
+    border-radius: 20px;
+  }
+  .role {
+    font-size: $fontSize-low;
+    color: $color-secondary;
+  }
+}

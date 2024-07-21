@@ -5,7 +5,7 @@ import { getFilmById } from "../../api";
 import { Container } from "@/components/ui/Container";
 import { Header } from "@/components/ui/Header";
 import { MoviePreview } from "@/components/MoviePreview";
-import { MovieTralier } from "@/components/MovieTrailer";
+import { MovieInfo } from "@/components/MovieInfo";
 import { Footer } from "@/components/ui/Footer";
 
 const MoviePage = () => {
@@ -15,6 +15,7 @@ const MoviePage = () => {
   const getId = async () => {
     let currentFilm = await getFilmById(id);
     setFilmId(currentFilm);
+    console.log(currentFilm);
   };
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const MoviePage = () => {
       <Container>
         <Header />
         <MoviePreview data={filmId} />
-        <MovieTralier data={filmId} />
+        <MovieInfo data={filmId} />
         <Footer />
       </Container>
     </>
