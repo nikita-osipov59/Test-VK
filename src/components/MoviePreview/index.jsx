@@ -1,13 +1,13 @@
 import React from "react";
-
 import { Play } from "@/components/ui/icons/Play";
+import { ROUTER_PATH } from "@/router/PATH/";
 
 import style from "./style.module.scss";
+import { Link } from "react-router-dom";
 
 export const MoviePreview = ({ data }) => {
   return (
     <>
-      {/* {TODO: сделать переисползуемым компонент} */}
       <div className={style.filmBox}>
         <h2>
           {data ? (
@@ -42,9 +42,9 @@ export const MoviePreview = ({ data }) => {
           src={data ? data?.poster.url : "Загрузка.."}
           alt={data?.name}
         />
-        <button className={style.button}>
+        <Link className={style.button} to={ROUTER_PATH.MOVIE + `/${data.id}`}>
           Смотреть <Play />
-        </button>
+        </Link>
       </div>
     </>
   );
