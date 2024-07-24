@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "react-ts-loaders";
 
 import { getFilmById } from "../../api";
+
 import { Container } from "@/components/ui/Container";
 import { Header } from "@/components/ui/Header";
 import { MoviePreview } from "@/components/MoviePreview";
@@ -24,12 +26,16 @@ const MoviePage = () => {
 
   return (
     <>
-      <Container>
-        <Header />
-        <MoviePreview data={filmId} />
-        <MovieInfo data={filmId} />
-        <Footer />
-      </Container>
+      {filmId ? (
+        <Container>
+          <Header />
+          <MoviePreview data={filmId} />
+          <MovieInfo data={filmId} />
+          <Footer />
+        </Container>
+      ) : (
+        <Loader className="loader" color="#f50" size={80} />
+      )}
     </>
   );
 };
