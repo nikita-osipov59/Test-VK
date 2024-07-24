@@ -3,8 +3,9 @@ import Loader from "react-ts-loaders";
 
 import { getRandomFilm } from "../../api";
 
-import { Header } from "@/components/ui/Header";
 import { Container } from "@/components/ui/Container";
+import { Header } from "@/components/ui/Header";
+import { Main } from "@/components/ui/Main";
 import { MoviePreview } from "@/components/MoviePreview";
 import { MovieList } from "@/components/MovieList";
 import { Footer } from "@/components/ui/Footer";
@@ -26,8 +27,10 @@ const HomePage = () => {
       {randomFilm ? (
         <Container>
           <Header />
-          <MoviePreview data={randomFilm} />
-          <MovieList />
+          <Main>
+            <MoviePreview data={randomFilm} />
+            <MovieList />
+          </Main>
           <Footer />
         </Container>
       ) : (

@@ -6,6 +6,7 @@ import { getFilmById } from "../../api";
 
 import { Container } from "@/components/ui/Container";
 import { Header } from "@/components/ui/Header";
+import { Main } from "@/components/ui/Main";
 import { MoviePreview } from "@/components/MoviePreview";
 import { MovieInfo } from "@/components/MovieInfo";
 import { Footer } from "@/components/ui/Footer";
@@ -29,8 +30,10 @@ const MoviePage = () => {
       {filmId ? (
         <Container>
           <Header />
-          <MoviePreview data={filmId} />
-          <MovieInfo data={filmId} />
+          <Main>
+            <MoviePreview data={filmId} />
+            <MovieInfo data={filmId} />
+          </Main>
           <Footer />
         </Container>
       ) : (

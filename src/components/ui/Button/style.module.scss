@@ -1,0 +1,17 @@
+@import "@/styles/variables.modules";
+
+.button {
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #f50 69.93%, #d6bb00);
+  color: $color-main;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(110%);
+  }
+}

@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import style from "./style.module.scss";
 import { ROUTER_PATH } from "@/router/PATH/";
-import { Play } from "@/components/ui/icons/Play";
+import { Button } from "@/components/ui/Button";
 
 export const MoviePreview = ({ data }) => {
   return (
@@ -32,9 +31,7 @@ export const MoviePreview = ({ data }) => {
           src={data && data?.poster.url}
           alt={data?.name}
         />
-        <Link className={style.button} to={ROUTER_PATH.MOVIE + `/${data.id}`}>
-          Смотреть <Play />
-        </Link>
+        <Button title="Смотреть" to={ROUTER_PATH.MOVIE + `/${data.id}`} />
       </div>
     </>
   );
