@@ -1,13 +1,14 @@
 import React from "react";
 
 import style from "./style.module.scss";
+import { Category } from "@/components/ui/Category";
 
 export const MovieCast = ({ data }) => {
   return (
     <>
       {data && (
         <>
-          <p className={style.title}>В ролях:</p>
+          <Category title="В ролях:" />
           <ul className={style.castList}>
             {data.persons.map((item) => {
               return (

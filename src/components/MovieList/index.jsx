@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { getListFilm } from "../../api";
+
+import { Category } from "@/components/ui/Category";
 import { ROUTER_PATH } from "@/router/PATH/";
 import style from "./style.module.scss";
 
@@ -20,7 +22,7 @@ export const MovieList = () => {
 
   return (
     <div className={style.boxList}>
-      <p className={style.category}>Список фильмов:</p>
+      <Category title="Список фильмов:" />
       <ul className={style.movieList}>
         {listFilm?.docs?.map((item) => (
           <li key={item.id}>

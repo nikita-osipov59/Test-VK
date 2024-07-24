@@ -1,0 +1,12 @@
+@import "@/styles/variables.modules";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  margin-top: 25px;
+}
+
+.logo {
+  color: $color-main;
+}
