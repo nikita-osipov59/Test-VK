@@ -20,12 +20,11 @@
     align-items: center;
     .imdb {
       height: 25px;
-      margin-right: 10px;
     }
     .genreList {
       display: flex;
       li + li {
-        margin-left: 15px;
+        margin-left: 10px;
       }
     }
   }
