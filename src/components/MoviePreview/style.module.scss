@@ -23,12 +23,8 @@
     }
     .genreList {
       display: flex;
-      li + li {
-        margin-left: 10px;
-      }
     }
   }
-
   .bgFilm {
     position: absolute;
     height: 700px;

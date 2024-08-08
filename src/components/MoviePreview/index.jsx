@@ -11,25 +11,21 @@ export const MoviePreview = ({ data }) => {
       {data ? (
         <div className={style.filmBox}>
           <h2>
-            <img className={style.logo} src={data?.logo.url} alt={data?.name} />
+            <img className={style.logo} src={data.logo.url} alt={data.name} />
           </h2>
-          <h1>{data && data?.name}</h1>
+          <h1>{data.name}</h1>
           <div className={style.content}>
             <img className={style.imdb} src="/imdb.png" alt="imdb" />
-            {data?.rating.imdb}⭐<p>{data && data?.year}</p>
+            {data.rating.imdb}⭐<p>{data.year}</p>
             <ul className={style.genreList}>
-              {data?.genres.map((genre, index) => {
-                return <li key={index}>{genre.name},</li>; //{TODO: Ограничить до 4 жанров}
+              {data.genres.slice(0, 4).map((genre, index) => {
+                return <li key={index}>{(index ? ", " : "") + genre.name}</li>;
               })}
             </ul>
-            <span>{data?.ageRating}+</span>
+            <span>{data.ageRating}+</span>
           </div>
-          <p className={style.description}>{data && data?.description}</p>
-          <img
-            className={style.bgFilm}
-            src={data && data?.poster.url}
-            alt={data?.name}
-          />
+          <p className={style.description}>{data.description}</p>
+          <img className={style.bgFilm} src={data.poster.url} alt={data.name} />
           <Button title="Смотреть" to={ROUTER_PATH.MOVIE + `/${data.id}`} />
         </div>
       ) : (
