@@ -1,8 +1,19 @@
-# React + Vite
+# Тестовое задание от vk.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Как запустить:
 
-Currently, two official plugins are available:
+1) Через вашу среду разработки
+```
+git clone https://github.com/nikita-osipov59/Test-VK.git
+npm i
+npm run build
+npm run preview
+```
+2) По ссылке на деплой Vercel - https://test-vk-drab.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Выполнены все требования по функционалу, кроме дополнительного ( позже доделаю )
+
+Выполнено без использования TypeScript и какого-либо state-manager ( по итогу пожалел об этом )
+
+Техническое задание:
+![image](https://github.com/user-attachments/assets/dfb8ce82-31af-4879-a491-27c92e7edb7f)
