@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Loader from "react-ts-loaders";
 
 import { getFilmByGenre, getGenreName, getRandomFilm } from "../../api";
@@ -30,7 +30,7 @@ const HomePage = () => {
     setListGenre(currentList);
   };
 
-  const getList = async () => {
+  const getListFilm = async () => {
     let currentFilm = await getFilmByGenre(
       selectedOption,
       selectedYear,
@@ -43,9 +43,9 @@ const HomePage = () => {
     getRandom();
   }, []);
 
-  useEffect(() => {
+  useMemo(() => {
     getListGenre();
-    getList();
+    getListFilm();
     setIsLoading(true);
   }, []);
 
@@ -62,7 +62,7 @@ const HomePage = () => {
               onClickYear={(year) => setSelectedYear(year)}
               onClickRating={(rating) => setSelectedRating(rating)}
               onClickFetch={() =>
-                getList(selectedOption, selectedYear, selectedRating)
+                getListFilm(selectedOption, selectedYear, selectedRating)
               }
               dataYear={selectedYear}
               dataRating={selectedRating}
